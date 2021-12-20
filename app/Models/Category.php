@@ -21,5 +21,12 @@ class Category extends Model
 //    {
 //        return 'name';
 //    }
+    public function getPagePhotoAttribute()
+    {
+        if (Storage::exists($this->attributes['photo'])) {
+            return Storage::url($this->attributes['photo']);
+        }
+        return 'https://teploelement.ru/images/not_found.jpg';
+    }
 
 }
