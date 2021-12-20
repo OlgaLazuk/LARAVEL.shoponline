@@ -20,7 +20,8 @@ class CatalogController extends Controller
             ->inRandomOrder()
             ->paginate(6);
 
-        return view('catalog.catalog', compact('categories', 'products'));
+        return view('catalog.catalog',
+            compact('categories', 'products'));
     }
 
     public function category(Request $request, Category $category)

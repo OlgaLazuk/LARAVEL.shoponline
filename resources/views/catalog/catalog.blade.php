@@ -153,8 +153,9 @@
                             <!-- Product Image -->
                             <div class="product-img">
                                 <img src="{{$product->pagePhoto}}" alt="">
+
                                 <!-- Hover Thumb -->
-                                <img class="hover-img" src="img/product-img/product2.jpg" alt="">
+                                <img class="hover-img" src="#" alt="">
                             </div>
 
                             <!-- Product Description -->
@@ -165,6 +166,7 @@
                                     <p class="product-price">${{$product->price}}</p>
                                     <a href="product-details.html">
                                         <h6>{{$product->name}}</h6>
+
                                     </a>
                                 </div>
 

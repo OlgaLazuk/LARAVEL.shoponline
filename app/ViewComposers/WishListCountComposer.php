@@ -11,7 +11,7 @@ class WishListCountComposer
 {
     public function compose(View $view)
     {
-//        dump(Session::get('wishlist'));
+//      dump(Session::get('wishlist'));
         $wishlistCount = Session::get('wishlist');
         if (isset($wishlistCount)) {
             $showWishList = count($wishlistCount);
@@ -19,6 +19,6 @@ class WishListCountComposer
             $showWishList = 0;
         }
         $view->with('showWishList',  $showWishList);
-//             dump($show);
+
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateCategoryRequest;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
@@ -13,30 +14,41 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+//        dump(\Request::route());
+        $categories = Category::all();
+       return view('admin.categories.index', compact('categories'));
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
-     */
+         */
     public function create()
     {
-        //
+        return view('admin.categories.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param CreateCategoryRequest $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+
+//        dd($request->all());
+//        $request -> validate([
+//           'name'=>['required'],
+//            'title'=>['required']
+//        ]);
+        $category = new Category();
+        $category->fill($request->all());
+        $category->save();
+        return response()
+            ->redirectToRoute('admin.categories.index');
     }
 
     /**
@@ -58,19 +70,23 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        //
+        return view('admin.categories.edit', compact('category'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param Request $request
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Category $category)
     {
-        //
+//       $category = Category::query()->find($category);
+        $category->fill($request->all());
+        $category->save();
+        return response()
+            ->redirectToRoute('admin.categories.index');
     }
 
     /**
