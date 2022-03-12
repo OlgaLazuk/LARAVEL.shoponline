@@ -5,9 +5,9 @@
     <div class="section">
         <div class="container">
             <div class="row">
-                {{--@dump($errors->all())--}}
+{{--              @dump($errors->all())--}}
                 <div class="col-md-12">
-                    <h1>АВТОРИЗАЦИЯ ПОЛЬЗОВАТЕЛЯ</h1>
+                    <span class="heading">АВТОРИЗАЦИЯ ПОЛЬЗОВАТЕЛЯ</span>
                     <form action="{{ route('checkLogin')}}" method="post">
                         @csrf
                         <div class="form-group">

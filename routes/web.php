@@ -3,8 +3,11 @@
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CatalogController;
+use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\FileController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\WishListController;
 use App\Http\Middleware\CheckPassword;
@@ -84,7 +87,10 @@ Route::post('/delete_to_wishlist/{id}',[WishListController::class,'destroyWishLi
 
 
 
-
+Route::get('/checkout', [CheckoutController::class, 'index'])
+    ->name('show_checkout');
+Route::post('/checkout', [CheckoutController::class, 'checkout'])
+    ->name('checkout');
 
 
 //

@@ -42,7 +42,7 @@ class ViewServiceProvider extends ServiceProvider
         View::composer('*', CartCountComposer::class);
         View::composer('*', WishListCountComposer::class);
 //        View::composer('*', ShowListComposer::class);
-//        View::composer('*', SumComposer::class);
+        View::composer('*', SumComposer::class);
 
         view()->share('site_name');
     }

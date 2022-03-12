@@ -75,14 +75,14 @@
                 </div>
                 <div class="col-12 col-lg-4">
                     <div class="cart-summary">
-                        <h5>Cart Total</h5>
+                        <h5>Корзина:</h5>
                         <ul class="summary-table">
-                            <li><span>subtotal:</span> <span>$140.00</span></li>
-                            <li><span>delivery:</span> <span>Free</span></li>
-                            <li><span>total:</span> <span>$140.00</span></li>
+                            <li><span>Стоимость:</span> <span>${{$sum}}</span></li>
+                            <li><span>Доставка:</span> <span>${{5}}</span></li>
+                            <li><span>Всего:</span> <span>${{$sum+5}}</span></li>
                         </ul>
                         <div class="cart-btn mt-100">
-                            <a href="cart.html" class="btn amado-btn w-100">Checkout</a>
+                            <a href="{{route('checkout')}}" class="btn amado-btn w-100">Перейти к оформлению заказа</a>
                         </div>
                     </div>
                 </div>

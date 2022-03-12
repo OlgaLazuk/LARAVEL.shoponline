@@ -10,7 +10,7 @@ class Product extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'title', 'price', 'description', 'active', 'photo', 'category_id'  ];
+    protected $fillable = ['name', 'title', 'price', 'description', 'active', 'photo', 'category_id', 'brand_id'  ];
 
 
 
@@ -18,6 +18,8 @@ class Product extends Model
     {
         return $this->belongsToMany(Category::class, 'category_id');
     }
+
+
 
     public function getRouteKeyName()
     {

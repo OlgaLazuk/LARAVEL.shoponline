@@ -21,6 +21,8 @@
 </head>
 
 <body>
+
+
 <!-- Search Wrapper Area Start -->
 <div class="search-wrapper section-padding-100">
     <div class="search-close">
@@ -45,14 +47,19 @@
 <!-- ##### Main Content Wrapper Start ##### -->
 <div class="main-content-wrapper d-flex clearfix">
 
+
     <!-- Mobile Nav (max width 767px)-->
     <div class="mobile-nav">
+
+
         <!-- Navbar Brand -->
         <div class="amado-navbar-brand">
             <a href="index.html"><img src="{{asset('img/core-img/logo.png')}}" alt=""></a>
         </div>
         <!-- Navbar Toggler -->
         <div class="amado-navbar-toggler">
+
+
             <span></span><span></span><span></span>
         </div>
     </div>
@@ -64,30 +71,37 @@
             <i class="fa fa-close" aria-hidden="true"></i>
         </div>
         <!-- Logo -->
+
         <div class="logo">
             <a href="index.html"><img src="{{asset('img/core-img/logo.png')}}" alt=""></a>
+
+
         </div>
         <!-- Amado Nav -->
+
+
         <nav class="amado-nav">
+
             <ul>
-                <li class="active"><a href="{{route('main_page')}}">Главная</a></li>
+                <li ><a href="{{route('main_page')}}">Главная</a></li>
                 <li><a href="{{route('catalog')}}">Каталог</a></li>
-                <li><a href="product-details.html">Товары</a></li>
+{{--                <li><a href="product-details.html">Товары</a></li>--}}
                 <li><a href="{{route('show_cart')}}">Корзина</a></li>
-                <li><a href="checkout.html">Оформить заказ</a></li>
+                <li><a href="{{route('checkout')}}">Оформить заказ</a></li>
             </ul>
         </nav>
         <!-- Button Group -->
         <div class="amado-btn-group mt-30 mb-100">
-            <a href="#" class="btn amado-btn mb-15">%Скидки%</a>
-            <a href="#" class="btn amado-btn active">Новинки каталога</a>
+            <a href="{{route('register')}}" class="btn amado-btn mb-15"><i class="fa fa-user-o"></i>Регистрация</a>
+            <a href="{{route('login')}}" class="btn amado-btn active"><i class="fa fa-user-o"></i>Аутентификация</a>
         </div>
         <!-- Cart Menu -->
         <div class="cart-fav-search mb-100">
             <a href="{{route('show_cart')}}" class="cart-nav"><img src="{{asset('img/core-img/cart.png')}}" alt="">
                 Корзина
                 <span>({{$show}})</span></a>
-            <a href="{{route('show_wishlist')}}" class="fav-nav"><img src="{{asset('img/core-img/favorites.png')}}" alt=""> Избранное
+            <a href="{{route('show_wishlist')}}" class="fav-nav"><img src="{{asset('img/core-img/favorites.png')}}"
+                                                                      alt=""> Избранное
                 <span>({{$showWishList}})</span>
             </a>
             <a href="#" class="search-nav"><img src="{{asset('img/core-img/search.png')}}" alt=""> Поиск</a>
@@ -122,6 +136,7 @@
             <div class="col-12 col-lg-6 col-xl-5">
                 <div class="newsletter-form mb-100">
                     <form action="#" method="post">
+                        @csrf
                         <input type="email" name="email" class="nl-email" placeholder="Ваш E-mail">
                         <input type="submit" value="Подписаться">
                     </form>
@@ -166,20 +181,18 @@
                             </button>
                             <div class="collapse navbar-collapse" id="footerNavContent">
                                 <ul class="navbar-nav ml-auto">
-                                    <li class="nav-item active">
+                                    <li class="nav-item">
                                         <a class="nav-link" href="{{route('main_page')}}">Главная</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{route('catalog')}}">Каталог</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="product-details.html">Товары</a>
-                                    </li>
+
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{route('show_cart')}}">Корзина</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="checkout.html">Оформить заказ</a>
+                                        <a class="nav-link" href="{{route('checkout')}}">Оформить заказ</a>
                                     </li>
                                 </ul>
                             </div>

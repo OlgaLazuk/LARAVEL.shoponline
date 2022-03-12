@@ -4,7 +4,7 @@
     <div class="section">
         <div class="container">
             <div class="row">
-                @dump($errors->all())
+{{--                @dump($errors->all())--}}
                 <div class="col-md-12">
                     <span class="heading">РЕГИСТРАЦИЯ</span>
                     <form action="{{ route('registration')}}" method="post">

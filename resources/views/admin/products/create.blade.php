@@ -12,10 +12,11 @@
                     <input class="form-control" name="name">
                 </div>
 
-                <div class="form-group">
-                    <label>category_id</label>
-                    <input class="form-control" name="category_id">
-                </div>
+{{--                <div class="form-group">--}}
+{{--                    <label>category_id</label>--}}
+{{--                    <input class="form-control" name="category_id">--}}
+{{--                </div>--}}
+
                 <div class="form-group">
                     <label>TITLE</label>
                     <input class="form-control" name="title">

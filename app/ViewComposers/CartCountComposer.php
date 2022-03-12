@@ -3,7 +3,6 @@
 
 namespace App\ViewComposers;
 
-
 use Illuminate\Support\Facades\Session;
 use Illuminate\View\View;
 
@@ -18,7 +17,6 @@ class CartCountComposer
         } else {
             $show = 0;
         }
-
         $view->with('show', $show);
     }
 }

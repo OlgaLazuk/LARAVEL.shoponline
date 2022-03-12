@@ -14,10 +14,10 @@
                     <input class="form-control" type="text" name="name" value="{{ $product->name }}">
                 </div>
 
-                <div class="form-group">
-                    <label>category_id</label>
-                    <input class="form-control" type="text" name="category_id" value="{{$product->category_id}}">
-                </div>
+{{--                <div class="form-group">--}}
+{{--                    <label>category_id</label>--}}
+{{--                    <input class="form-control" type="text" name="category_id" value="{{$product->category_id}}">--}}
+{{--                </div>--}}
                 <div class="form-group">
                     <label>TITLE</label>
                     <input class="form-control" type="text" name="title" value="{{$product->title}}">
